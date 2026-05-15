@@ -1,4 +1,6 @@
 """
+When you're developing RAG for financial PDFs, overlooking even a single number in your search can lead to millions in losses. What is the most effective RAG search method you can implement in this case?
+
 For financial PDFs where precision is critical and missing a single number could cost millions, you need a hybrid multi-strategy RAG approach. Here's the best solution:
 
 🎯 Optimal RAG Strategy for Financial Documents
