@@ -1,4 +1,42 @@
+"""
+For financial PDFs where precision is critical and missing a single number could cost millions, you need a hybrid multi-strategy RAG approach. Here's the best solution:
 
+🎯 Optimal RAG Strategy for Financial Documents
+🎯 Key Features for Financial Accuracy:
+✅ Hybrid Search - Semantic + Keyword (won't miss anything)
+✅ Multi-Query - 5 query variations per search
+✅ Exact Number Preservation - No rounding or approximation
+✅ Source Citation - Every fact is traceable
+✅ Confidence Scoring - Know when to verify manually
+✅ Parent Context - Full context around numbers
+✅ Cross-Encoder Reranking - Maximum precision
+
+🚀 Quick Start:
+python
+from financial_rag_system import FinancialRAGSystem, FinancialDocumentProcessor
+
+# Process documents
+processor = FinancialDocumentProcessor()
+chunks = processor.split_with_metadata(documents)
+
+# Initialize system
+financial_rag = FinancialRAGSystem(vectorstore, embeddings, llm, chunks)
+
+# Query with verification
+result = financial_rag.query_with_verification(
+    "What was the Q4 2023 revenue?",
+    min_confidence=0.75
+)
+
+print(f"Answer: {result['answer']}")
+print(f"Confidence: {result['confidence']:.1%}")
+📊 Why This Approach Works:
+Maximum Recall - Hybrid + Multi-query ensures nothing is missed
+Maximum Precision - Reranking filters irrelevant results
+Exact Numbers - Special extraction preserves all digits
+Full Context - Parent retrieval provides surrounding information
+Verifiable - Source citations enable manual checking
+"""
 """
 Financial RAG System - Production Implementation
 High-precision RAG for financial documents where accuracy is critical
